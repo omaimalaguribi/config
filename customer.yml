@@ -20,11 +20,12 @@ spring:
   boot:
     admin:
       client:
-        url : http://localhost:8088
+        url: http://localhost:8088
   cloud:
     config:
+      enabled: false
       uri: http://localhost:8888
-      profile:
+
 eureka:
   client:
     serviceUrl:
@@ -32,11 +33,8 @@ eureka:
   instance:
     preferIpAddress: true
 
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-
-spring.cloud.config.enabled: false
